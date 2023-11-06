@@ -34,6 +34,7 @@
     .tab-content {
       display: none;
       padding: 20px;
+      text-align: center;
     }
     .tab-content.active {
       display: block;
@@ -44,12 +45,16 @@
       border: none;
     }
     @media (max-width: 768px) {
+      nav {
+        padding: 10px;
+        text-align: center;
+      }
       nav a {
         display: block;
         margin-bottom: 10px;
         padding: 10px;
         text-align: center;
-        width: 100%;
+        width: calc(100% - 20px);
       }
     }
   </style>
