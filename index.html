@@ -18,6 +18,9 @@
       padding: 10px 0;
       text-align: center;
     }
+    nav .nav-container {
+      display: inline-block;
+    }
     nav a {
       background-color: #ccc;
       border-radius: 15px;
@@ -56,13 +59,18 @@
         text-align: center;
         width: calc(100% - 20px);
       }
+      nav .nav-container {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#formEspañol" class="tab-link active" onclick="openTab('formEspañol')">Formulario en español</a>
-    <a href="#formIngles" class="tab-link" onclick="openTab('formIngles')">English Form</a>
+    <div class="nav-container">
+      <a href="#formEspañol" class="tab-link active" onclick="openTab('formEspañol')">Formulario en español</a>
+      <a href="#formIngles" class="tab-link" onclick="openTab('formIngles')">English Form</a>
+    </div>
   </nav>
   <main>
     <div class="tab-content active" id="formEspañol">
