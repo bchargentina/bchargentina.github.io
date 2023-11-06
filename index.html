@@ -27,8 +27,9 @@
       padding: 10px 20px;
       text-decoration: none;
     }
-    nav a:hover {
-      background-color: #bbb;
+    nav a.active {
+      background-color: #777;
+      color: #fff;
     }
     .tab-content {
       display: none;
@@ -55,7 +56,7 @@
 </head>
 <body>
   <nav>
-    <a href="#formEspañol" class="tab-link" onclick="openTab('formEspañol')">Formulario en español</a>
+    <a href="#formEspañol" class="tab-link active" onclick="openTab('formEspañol')">Formulario en español</a>
     <a href="#formIngles" class="tab-link" onclick="openTab('formIngles')">English Form</a>
   </nav>
   <main>
@@ -77,6 +78,8 @@
         tabLinks[i].classList.remove('active');
       }
       document.getElementById(tabId).classList.add('active');
+      var activeLink = document.querySelector('.tab-link[href="#' + tabId + '"]');
+      activeLink.classList.add('active');
       event.preventDefault();
     }
   </script>
